@@ -2,7 +2,7 @@
   <div class="header">
     <div class="headerLeft"><i class="iconfont">&#xe624;</i></div>
     <div class="headerInput"><i class="iconfont">&#xe632;</i>输入城市/景点/游玩主题</div>
-    <div class="headerRight">地区<i class="iconfont">&#xe62d;</i></div>
+    <div class="headerRight">大庆<i class="iconfont">&#xe62d;</i></div>
   </div>
 </template>
 
