@@ -71,7 +71,7 @@ export default {
       ],
       swiperOption: {
         pagination: {
-          el: '.swiper-pagination'
+          el: '.icons>.swiper-pagination'
         }
       }
     }
@@ -93,15 +93,17 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+   @import "~styles/common.styl"
   .icons >>> .swiper-pagination
     width:100%
   .icons >>> .swiper-pagination-bullet
     margin:0 4px
   .icons
     width: 100%
-    height: 1.9rem
+    height: 1.8rem
     overflow:hidden
     padding-top:.05rem
+    background-color: #fff
     .icon-item
       padding-top:.05rem
       float: left
@@ -116,4 +118,5 @@ export default {
         width: 100%
         text-align: center
         margin-top:.05rem
+        ellipsis()
 </style>

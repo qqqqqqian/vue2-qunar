@@ -21,7 +21,7 @@ export default {
           disableOnInteraction: false},
         loop: true,
         pagination: {
-          el: '.swiper-pagination'
+          el: '.wrapper .swiper-pagination'
         }
       },
       items: [

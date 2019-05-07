@@ -3,6 +3,7 @@
     <home-header></home-header>
     <HomeSwiper></HomeSwiper>
     <HomeIcons></HomeIcons>
+    <HomeHot></HomeHot>
   </div>
 </template>
 
@@ -10,15 +11,16 @@
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
+import HomeHot from './components/HotGroup'
 export default {
   name: 'Home',
   components: {
     HomeHeader,
     HomeSwiper,
-    HomeIcons
+    HomeIcons,
+    HomeHot
   }
 }
 </script>
-<style scoped>
-
+<style lang="stylus" scoped>
 </style>
