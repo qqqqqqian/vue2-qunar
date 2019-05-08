@@ -20,26 +20,8 @@
 <script>
 export default {
   name: 'HomeWhere',
-  data () {
-    return {
-      whereItems: [
-        {
-          imgSrc: 'http://img1.qunarzz.com/sight/source/1505/e3/e9761259adfc1d.jpg_r_640x214_21b96532.jpg',
-          name: '哈尔滨必游',
-          desc: '冰雪之冠，富有异国情调的美丽都市'
-        },
-        {
-          imgSrc: 'http://img1.qunarzz.com/sight/source/1603/6c/37b9116a55d226.jpg_r_640x214_b6296033.jpg',
-          name: '冰城踏青',
-          desc: '春光明媚，踏青赏花去处多'
-        },
-        {
-          imgSrc: 'http://img1.qunarzz.com/sight/source/1505/91/04b59ae6faf17a.jpg_r_640x214_ce69a65a.jpg',
-          name: '东方小巴黎的魅力',
-          desc: '中央大街随处可见的西式文化你想探个究竟吗？来这里感受文艺复兴风格的建筑'
-        }
-      ]
-    }
+  props: {
+    whereItems: Array
   }
 }
 </script>

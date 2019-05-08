@@ -36,48 +36,9 @@
 <script>
 export default {
   name: 'HomeGuessLike',
-  data () {
-    return {
-      GuessItems: [
-        {
-          imgSrc: 'http://img1.qunarzz.com/sight/p0/201301/09/ad6a3f8dffda8b4893835fbb.jpg_250x250_bc55b077.jpg',
-          sightName: '波塞冬旅游度假区',
-          price: '170',
-          score: '5.0',
-          commentNum: '1',
-          address: '松北区',
-          tag: '可订明日'
-        },
-        {
-          imgSrc: 'http://img1.qunarzz.com/sight/p0/1512/51/5193b969b371d76990.water.jpg_200x200_b4c5e77f.jpg',
-          sightName: '哈尔滨极地馆',
-          price: '145',
-          score: '5.0',
-          commentNum: '148',
-          address: '杜尔伯特蒙古族自治县',
-          tag: '可订今日'
-        },
-        {
-          imgSrc: 'http://img1.qunarzz.com/sight/p0/1503/66/6671d649e3d374a2.img.jpg_200x200_0cd009ed.jpg',
-          sightName: '林甸温泉欢乐谷',
-          price: '76',
-          score: '4.6',
-          commentNum: '488',
-          address: '林甸县',
-          tag: '随买随用'
-        },
-        {
-          imgSrc: 'http://img1.qunarzz.com/sight/p0/201309/13/5b6fc335fd99f439c8d65eac.jpg_200x200_2ba3210c.jpg',
-          sightName: '大雁戏楼',
-          price: '30',
-          score: '5.0',
-          commentNum: '1',
-          address: '大庆'
-        }
-      ],
-      tagBgImgs: ['https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png',
-        'https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png']
-    }
+  props: {
+    GuessItems: Array,
+    tagBgImgs: Array
   }
 }
 </script>

@@ -21,39 +21,9 @@
 <script>
 export default {
   name: 'HomeHotGroup',
-  data () {
-    return {
-      hotGroupItems: [
-        {
-          imgSrc: 'http://img1.qunarzz.com/sight/p0/201301/09/ad6a3f8dffda8b4893835fbb.jpg_250x250_bc55b077.jpg',
-          sightName: '鹤鸣湖湿地',
-          price: '98'
-        },
-        {
-          imgSrc: 'http://img1.qunarzz.com/sight/p0/1711/5a/5a6e547cc6cdc062a3.img.jpg_250x250_ba575130.jpg',
-          sightName: '林甸北国温泉',
-          price: '105'
-        },
-        {
-          imgSrc: 'http://img1.qunarzz.com/sight/p0/201309/13/5b6fc335fd99f439c8d65eac.jpg_250x250_d046a14a.jpg',
-          sightName: '大雁戏楼',
-          price: '30'
-        },
-        {
-          imgSrc: 'http://img1.qunarzz.com/sight/p0/1410/21/3d79f644ca4d4a0636ef4659c0a9ff7b.jpg_250x250_589fc9ec.jpg',
-          sightName: '大庆艺术邨温泉',
-          price: '105'
-        },
-        {
-          imgSrc: 'http://img1.qunarzz.com/sight/p0/201403/04/d8baf0feab6e7554c04d3389a35fe570.jpg_250x250_efdd10bb.jpg',
-          sightName: '连环湖温泉景区',
-          price: '85'
-        }
-      ],
-      hotTagImgs: ['http://img1.qunarzz.com/piao/fusion/1710/ab/159673b63e6ca702.png',
-        'http://img1.qunarzz.com/piao/fusion/1710/2d/36d0c4adaebbbc02.png',
-        'http://img1.qunarzz.com/piao/fusion/1710/67/edc47ffef9e96b02.png']
-    }
+  props: {
+    hotGroupItems: Array,
+    hotTagImgs: Array
   }
 }
 </script>

@@ -1,0 +1,165 @@
+{
+	"ret": "true",
+	"data": {
+		"swiperList": [
+			{
+				"id": "0001",
+				"img": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/d7bbc21db442366a882e04ddc984669a.jpg_750x200_85e640d9.jpg"
+			},
+			{
+				"id": "0002",
+				"img": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/87a224d0349d94a11e97f31aa1aba4f5.jpg_750x200_1f78af87.jpg"
+			},
+			{
+				"id": "0003",
+				"img": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/e0c5d91cb9b435518bb223b81b70874e.jpg_750x200_f2d5c66a.jpg"
+			}
+		],
+		"iconList": [
+			{
+				"id": "0001",
+				"imgSrc": "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+				"desc": "景点门票"
+			},
+			{
+				"id": "0002",
+				"imgSrc": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/a40ee278d67000f2a29d2e20f6a029b3.png",
+				"desc": "自然风光"
+			},
+			{
+				"id": "0003",
+				"imgSrc": "http://img1.qunarzz.com/piao/fusion/1803/47/c2b659e048b11602.png",
+				"desc": "东北虎林园"
+			},
+			{
+				"id": "0004",
+				"imgSrc": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20191/de711920c71e38287d9f95f7910aa1aa.png",
+				"desc": "精品小团"
+			},
+			{
+				"id": "0005",
+				"imgSrc": "http://img1.qunarzz.com/piao/fusion/1901/16/caa09d30b24d8302.png",
+				"desc": "极地馆"
+			},
+			{
+				"id": "0006",
+				"imgSrc": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/edefc27cfe4d3b9665307d2868f2fdf2.png",
+				"desc": "波塞冬"
+			},
+			{
+				"id": "0007",
+				"imgSrc": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/5de9127e1b930810fc7c16876b7da113.png",
+				"desc": "哈尔滨融创"
+			},
+			{
+				"id": "0008",
+				"imgSrc": "http://img1.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png",
+				"desc": "踏青赏花"
+			},
+			{
+				"id": "0009",
+				"imgSrc": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+				"desc": "龙沙植物园"
+			},
+			{
+				"id": "0010",
+				"imgSrc": "http://img1.qunarzz.com/piao/fusion/1803/80/416c6ab3368d1f02.png",
+				"desc": "全部玩乐"
+			}
+		],
+		"groupList": {
+			"hotGroupItems": [
+				{
+					"imgSrc": "http://img1.qunarzz.com/sight/p0/201301/09/ad6a3f8dffda8b4893835fbb.jpg_250x250_bc55b077.jpg",
+					"sightName": "鹤鸣湖湿地",
+					"price": "98"
+				},
+				{
+					"imgSrc": "http://img1.qunarzz.com/sight/p0/1711/5a/5a6e547cc6cdc062a3.img.jpg_250x250_ba575130.jpg",
+					"sightName": "林甸北国温泉",
+					"price": "105"
+				},
+				{
+					"imgSrc": "http://img1.qunarzz.com/sight/p0/201309/13/5b6fc335fd99f439c8d65eac.jpg_250x250_d046a14a.jpg",
+					"sightName": "大雁戏楼",
+					"price": "30"
+				},
+				{
+					"imgSrc": "http://img1.qunarzz.com/sight/p0/1410/21/3d79f644ca4d4a0636ef4659c0a9ff7b.jpg_250x250_589fc9ec.jpg",
+					"sightName": "大庆艺术邨温泉",
+					"price": "105"
+				},
+				{
+					"imgSrc": "http://img1.qunarzz.com/sight/p0/201403/04/d8baf0feab6e7554c04d3389a35fe570.jpg_250x250_efdd10bb.jpg",
+					"sightName": "连环湖温泉景区",
+					"price": "85"
+				}
+			],
+			"hotTagImgsList": [
+				"http://img1.qunarzz.com/piao/fusion/1710/ab/159673b63e6ca702.png",
+				"http://img1.qunarzz.com/piao/fusion/1710/2d/36d0c4adaebbbc02.png",
+				"http://img1.qunarzz.com/piao/fusion/1710/67/edc47ffef9e96b02.png"
+			]
+		},
+		"guessLikeList": {
+			"GuessItemsList": [
+				{
+					"imgSrc": "http://img1.qunarzz.com/sight/p0/201301/09/ad6a3f8dffda8b4893835fbb.jpg_250x250_bc55b077.jpg",
+					"sightName": "波塞冬旅游度假区",
+					"price": "170",
+					"score": "5.0",
+					"commentNum": "1",
+					"address": "松北区",
+					"tag": "可订明日"
+				},
+				{
+					"imgSrc": "http://img1.qunarzz.com/sight/p0/1512/51/5193b969b371d76990.water.jpg_200x200_b4c5e77f.jpg",
+					"sightName": "哈尔滨极地馆",
+					"price": "145",
+					"score": "5.0",
+					"commentNum": "148",
+					"address": "杜尔伯特蒙古族自治县",
+					"tag": "可订今日"
+				},
+				{
+					"imgSrc": "http://img1.qunarzz.com/sight/p0/1503/66/6671d649e3d374a2.img.jpg_200x200_0cd009ed.jpg",
+					"sightName": "林甸温泉欢乐谷",
+					"price": "76",
+					"score": "4.6",
+					"commentNum": "488",
+					"address": "林甸县",
+					"tag": "随买随用"
+				},
+				{
+					"imgSrc": "http://img1.qunarzz.com/sight/p0/201309/13/5b6fc335fd99f439c8d65eac.jpg_200x200_2ba3210c.jpg",
+					"sightName": "大雁戏楼",
+					"price": "30",
+					"score": "5.0",
+					"commentNum": "1",
+					"address": "大庆"
+				}
+			],
+			"tagBgImgsList": [
+				"https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png",
+				"https://img1.qunarzz.com/piao/fusion/1802/52/b9080e45b69b4f02.png"
+			]
+		},
+		"whereItemsList": [
+			{
+				"imgSrc": "http://img1.qunarzz.com/sight/source/1505/e3/e9761259adfc1d.jpg_r_640x214_21b96532.jpg",
+				"name": "哈尔滨必游",
+				"desc": "冰雪之冠，富有异国情调的美丽都市"
+			},
+			{
+				"imgSrc": "http://img1.qunarzz.com/sight/source/1603/6c/37b9116a55d226.jpg_r_640x214_b6296033.jpg",
+				"name": "冰城踏青",
+				"desc": "春光明媚，踏青赏花去处多"
+			},
+			{
+				"imgSrc": "http://img1.qunarzz.com/sight/source/1505/91/04b59ae6faf17a.jpg_r_640x214_ce69a65a.jpg",
+				"name": "东方小巴黎的魅力",
+				"desc": "中央大街随处可见的西式文化你想探个究竟吗？来这里感受文艺复兴风格的建筑"
+			}
+		]
+	}
+}
