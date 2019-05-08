@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'HotGroup',
+  name: 'HomeHotGroup',
   data () {
     return {
       hotGroupItems: [
@@ -63,16 +63,13 @@ export default {
     margin-top: .1rem
     width: 100%
     background-color: #fff
-
     .hot-group-title
       padding: .12rem 0 .13rem
       position: relative
-
       img
         width: 0.15rem
         vertical-align: text-top
         margin-left: .1rem
-
       span
         font-size: .16rem
         line-height: .22rem
