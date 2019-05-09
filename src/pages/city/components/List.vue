@@ -10,132 +10,20 @@
       <h2 class="h2-title">热门城市</h2>
       <ul class="hot-loc">
         <div class="middle-border border-rightleft"></div>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
+        <li class="city border-bottom" v-for="item in hotCities" :key="item.id">
+          <a href="">{{item.name}}</a>
         </li>
       </ul>
-      <h2 class="h2-title">A</h2>
-      <ul class="hot-loc tr4">
-        <div class="left-border border-rightleft"></div>
-        <div class="right-border border-right"></div>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-      </ul>
-      <h2 class="h2-title">A</h2>
-      <ul class="hot-loc tr4">
-        <div class="left-border border-rightleft"></div>
-        <div class="right-border border-right"></div>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-      </ul>
-      <h2 class="h2-title">A</h2>
-      <ul class="hot-loc tr4">
-        <div class="left-border border-rightleft"></div>
-        <div class="right-border border-right"></div>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-      </ul>
-      <h2 class="h2-title">A</h2>
-      <ul class="hot-loc tr4">
-        <div class="left-border border-rightleft"></div>
-        <div class="right-border border-right"></div>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-        <li class="city border-bottom">
-          <a href="">北京</a>
-        </li>
-      </ul>
+      <div v-for="(value,key) in cities" :key="key">
+        <h2 class="h2-title">{{key}}</h2>
+        <ul class="hot-loc tr4">
+          <div class="left-border border-rightleft"></div>
+          <div class="right-border border-right"></div>
+          <li class="city border-bottom" v-for="item in value" :key="item.id">
+            <a href="">{{item.name}}</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -145,8 +33,12 @@ import BScroll from 'better-scroll'
 
 export default {
   name: 'List',
+  props: {
+    hotCities: Array,
+    cities: Object
+  },
   mounted () {
-    let scroll = new BScroll(this.$refs.wrapper)
+    this.scroll = new BScroll(this.$refs.wrapper)
   }
 }
 </script>

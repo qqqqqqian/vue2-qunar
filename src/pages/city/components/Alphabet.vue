@@ -1,24 +1,24 @@
 <template>
   <ul class="alphabet-wrapper">
-    <li>A</li>
-    <li>B</li>
-    <li>C</li>
-    <li>D</li>
-    <li>E</li>
-    <li>F</li>
-    <li>G</li>
+    <li v-for="item of alphabetAry" :key="item">{{item}}</li>
   </ul>
 </template>
 
 <script>
 export default {
-  name: 'Alphabet'
+  name: 'Alphabet',
+  props: {
+    alphabetAry: Array
+  }
 }
 </script>
 
 <style lang="stylus" scoped>
+  @import "~styles/common.styl"
   .alphabet-wrapper
-    height: 100%
+    color: $headerColor
+    top: 0.79rem
+    bottom: 0
     position: absolute
     right: 0
     width: .2rem

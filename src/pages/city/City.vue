@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="city">
     <city-header></city-header>
     <city-search></city-search>
-    <city-list></city-list>
-    <city-alphabet></city-alphabet>
+    <city-list :hotCities="hotCities" :cities="cities"></city-list>
+    <city-alphabet :alphabetAry="alphabetAry"></city-alphabet>
   </div>
 </template>
 
@@ -12,17 +12,46 @@ import CityHeader from './components/Header'
 import CitySearch from './components/Search'
 import CityList from './components/List'
 import CityAlphabet from './components/Alphabet'
+import Axios from 'axios'
+
 export default {
   name: 'City',
+  data () {
+    return {
+      hotCities: [],
+      cities: {}
+    }
+  },
   components: {
     CityHeader,
     CitySearch,
     CityList,
     CityAlphabet
+  },
+  methods: {
+    getData ({ data }) {
+      if (data.ret && data.data) {
+        const res = data.data
+        this.hotCities = res.hotCities
+        this.cities = res.cities
+      }
+    }
+  },
+  computed: {
+    alphabetAry () {
+      const tempAry = []
+      for (let key in this.cities) {
+        tempAry.push(key)
+      }
+      return tempAry
+    }
+  },
+  created () {
+    Axios.get('/static/mock/city.json').then(this.getData)
+
   }
 }
 </script>
 
-<style scoped>
-
+<style lang="stylus" scoped>
 </style>
