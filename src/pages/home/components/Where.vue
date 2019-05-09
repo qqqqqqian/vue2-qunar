@@ -38,7 +38,8 @@ export default {
       .where-list-one
         width: 100%
         margin-bottom .05rem
-        display :block
+        display: block
+
         .list-img
           width: 100%
           height: 0
@@ -64,5 +65,5 @@ export default {
             overflow: hidden
             text-overflow: ellipsis
             white-space: nowrap
-            padding-right:.7rem
+            padding-right: .7rem
 </style>
