@@ -1,7 +1,7 @@
 <template>
   <div class="city">
     <city-header></city-header>
-    <city-search></city-search>
+    <city-search :cities="cities"></city-search>
     <city-list :hotCities="hotCities" :cities="cities" :letter="letter"></city-list>
     <city-alphabet :alphabetAry="alphabetAry" @change="letterChange"></city-alphabet>
   </div>
