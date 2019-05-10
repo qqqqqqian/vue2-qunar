@@ -11,16 +11,16 @@
       <ul class="hot-loc">
         <div class="middle-border border-rightleft"></div>
         <li class="city border-bottom" v-for="item in hotCities" :key="item.id">
-          <a href="">{{item.name}}</a>
+          <a href="javascript:;">{{item.name}}</a>
         </li>
       </ul>
       <div v-for="(value,key) in cities" :key="key">
-        <h2 class="h2-title">{{key}}</h2>
+        <h2 class="h2-title" :ref="key">{{key}}</h2>
         <ul class="hot-loc tr4">
           <div class="left-border border-rightleft"></div>
           <div class="right-border border-right"></div>
           <li class="city border-bottom" v-for="item in value" :key="item.id">
-            <a href="">{{item.name}}</a>
+            <a href="javascript:;">{{item.name}}</a>
           </li>
         </ul>
       </div>
@@ -35,7 +35,13 @@ export default {
   name: 'List',
   props: {
     hotCities: Array,
-    cities: Object
+    cities: Object,
+    letter: String
+  },
+  watch: {
+    letter (text) {
+      this.scroll.scrollToElement(this.$refs[text][0])
+    }
   },
   mounted () {
     this.scroll = new BScroll(this.$refs.wrapper)

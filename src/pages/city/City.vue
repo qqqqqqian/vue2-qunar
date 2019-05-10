@@ -2,8 +2,8 @@
   <div class="city">
     <city-header></city-header>
     <city-search></city-search>
-    <city-list :hotCities="hotCities" :cities="cities"></city-list>
-    <city-alphabet :alphabetAry="alphabetAry"></city-alphabet>
+    <city-list :hotCities="hotCities" :cities="cities" :letter="letter"></city-list>
+    <city-alphabet :alphabetAry="alphabetAry" @change="letterChange"></city-alphabet>
   </div>
 </template>
 
@@ -19,7 +19,8 @@ export default {
   data () {
     return {
       hotCities: [],
-      cities: {}
+      cities: {},
+      letter: ''
     }
   },
   components: {
@@ -35,6 +36,9 @@ export default {
         this.hotCities = res.hotCities
         this.cities = res.cities
       }
+    },
+    letterChange (text) {
+      this.letter = text
     }
   },
   computed: {
@@ -48,7 +52,6 @@ export default {
   },
   created () {
     Axios.get('/static/mock/city.json').then(this.getData)
-
   }
 }
 </script>
