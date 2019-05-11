@@ -5,6 +5,7 @@ import fastClick from 'fastclick'
 import App from './App'
 import router from './router'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import store from './store'
 import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
@@ -16,6 +17,7 @@ fastClick.attach(document.body)
 new Vue({
   el: '#app',
   router,
+  store,
   components: {
     App},
   template: '<App/>' // 这样写会直接替换掉el中的节点

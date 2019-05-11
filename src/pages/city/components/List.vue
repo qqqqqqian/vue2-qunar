@@ -4,13 +4,13 @@
       <h2 class="h2-title">您的位置</h2>
       <ul class="loc">
         <li class="city border-right">
-          <a href="">北京</a>
+          <a href="">{{this.city}}</a>
         </li>
       </ul>
       <h2 class="h2-title">热门城市</h2>
       <ul class="hot-loc">
         <div class="middle-border border-rightleft"></div>
-        <li class="city border-bottom" v-for="item in hotCities" :key="item.id">
+        <li class="city border-bottom" v-for="item in hotCities" :key="item.id" @click="changeCity(item.name)">
           <a href="javascript:;">{{item.name}}</a>
         </li>
       </ul>
@@ -20,7 +20,7 @@
           <div class="left-border border-rightleft"></div>
           <div class="right-border border-right"></div>
           <li class="city border-bottom" v-for="item in value" :key="item.id">
-            <a href="javascript:;">{{item.name}}</a>
+            <a href="javascript:;" @click="changeCity(item.name)">{{item.name}}</a>
           </li>
         </ul>
       </div>
@@ -30,13 +30,25 @@
 
 <script>
 import BScroll from 'better-scroll'
-
+import {mapState, mapMutations} from 'vuex'
 export default {
   name: 'List',
   props: {
     hotCities: Array,
     cities: Object,
     letter: String
+  },
+  methods: {
+    changeCity (city) {
+      this.changeStateCity(city)
+      this.$router.push('/')
+    },
+    ...mapMutations({
+      changeStateCity: 'changeCity'
+    })
+  },
+  computed: {
+    ...mapState(['city'])
   },
   watch: {
     letter (text) {

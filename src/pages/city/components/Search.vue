@@ -5,7 +5,9 @@
     </div>
     <div class="search-result" v-show="inputCon.length">
       <ul>
-        <li class="search-result-item" v-for="item of result" :key="item.id">{{item.name}}</li>
+        <li class="search-result-item" v-for="item of result" :key="item.id" @click="changeCity(item.name)">
+          {{item.name}}
+        </li>
         <li class="search-result-item" v-show="hasResult && inputStatus">查询不到数据哦~</li>
       </ul>
     </div>
@@ -14,7 +16,7 @@
 
 <script>
 import BScroll from 'better-scroll'
-
+import {mapMutations} from 'vuex'
 export default {
   name: 'citySearch',
   props: {
@@ -45,7 +47,6 @@ export default {
         const result = []
         for (const key in this.cities) {
           this.cities[key].forEach((item) => {
-            console.log(item.spell, item.name)
             if (item.spell.indexOf(this.inputCon) > -1 || item.name.indexOf(this.inputCon) > -1) {
               result.push(item)
             }
@@ -55,6 +56,15 @@ export default {
         this.inputStatus = true
       }, 100)
     }
+  },
+  methods: {
+    changeCity (city) {
+      this.changeStateCity(city)
+      this.$router.push('/')
+    },
+    ...mapMutations({
+      changeStateCity: 'changeCity'
+    })
   },
   computed: {
     hasResult () {
