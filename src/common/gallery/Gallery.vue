@@ -41,11 +41,6 @@ export default {
     handleCloseGallery () {
       this.$emit('closeGallery')
     }
-  },
-  computed: {
-    swiper () {
-      return this.$refs.mySwiper.swiper
-    }
   }
 }
 </script>

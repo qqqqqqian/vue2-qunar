@@ -2,42 +2,61 @@
   <div>
     <div class="img-banner" @click="handleShowGallery">
       <div class="img-wrapper">
-        <img src="//img1.qunarzz.com/sight/p0/1711/5a/5a6e547cc6cdc062a3.img.jpg_600x330_6af8fbe1.jpg" alt="">
+        <img :src="bannerImg" alt="">
       </div>
-      <div class="img-title">林甸北国温泉(AAAA景区)</div>
+      <div class="img-title">{{sightName}}</div>
       <div class="img-swipe">
         <i class="iconfont">&#xe635;</i>
-        <span class="img-swipe-num">22</span>
+        <span class="img-swipe-num">{{gallaryImgs.length}}</span>
       </div>
     </div>
-    <gallery :imgs="imgs" v-show="isShowGallery" @closeGallery="handleShowGallery"></gallery>
+    <fade>
+      <gallery :imgs="gallaryImgs" v-show="isShowGallery" @closeGallery="handleShowGallery"></gallery>
+    </fade>
   </div>
 </template>
 
 <script>
 import Gallery from 'common/gallery/Gallery'
+import fade from 'common/animation/fade/fade'
+
 export default {
   name: 'Banner',
+  props: {
+    gallaryImgs: Array,
+    sightName: String,
+    bannerImg: String
+  },
   components: {
-    Gallery
+    Gallery,
+    fade
   },
   data () {
     return {
-      imgs: [
-        'http://img1.qunarzz.com/sight/p0/1711/5a/5a6e547cc6cdc062a3.img.jpg_r_800x800_d50774ef.jpg',
-        'http://img1.qunarzz.com/sight/p0/1711/18/180a5a57a88356d6a3.img.jpg_r_800x800_7387c376.jpg',
-        'http://img1.qunarzz.com/sight/p0/1711/85/8542ecd9d13a6479a3.img.jpg_r_800x800_ab8fcc99.jpg'],
-      isShowGallery: false
+      isShowGallery: false,
+      scrollTop: 0
     }
   },
   methods: {
     handleShowGallery () {
       this.isShowGallery = !this.isShowGallery
+      if (this.isShowGallery) {
+        this.scrollTop = document.scrollingElement.scrollTop
+        document.body.classList.add('modal-open')
+        document.body.style.top = -this.scrollTop + 'px'
+      } else {
+        document.body.classList.remove('modal-open')
+        document.scrollingElement.scrollTop = this.scrollTop
+      }
     }
   }
 }
 </script>
-
+<style lang="stylus">
+  body.modal-open
+    position: fixed
+    width: 100%
+</style>
 <style lang="stylus" scoped>
   .img-banner
     &:after
