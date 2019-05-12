@@ -6,14 +6,14 @@
       <a href="javascript:;" class="hot-group-more">全部榜单<span class="iconfont">&#xe62e;</span></a>
     </div>
     <ul class="hot-group-list">
-      <li class="hot-group-list-one" v-for="(item,index) of hotGroupItems" :key="index">
+      <router-link tag="li" :to="`/detail/${index}`" class="hot-group-list-one" v-for="(item,index) of hotGroupItems" :key="index">
         <div class="list-tag" v-if="index<3">
           <img :src="hotTagImgs[index]" alt="" class="list-tag-img">
         </div>
         <div class="list-img-con"><img :src="item.imgSrc" alt="" class="list-img"></div>
         <div class="list-sight-name">{{item.sightName}}</div>
         <div class="list-price"><span>¥<em>{{item.price}}</em></span>起</div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>
@@ -33,13 +33,16 @@ export default {
     margin-top: .1rem
     width: 100%
     background-color: #fff
+
     .hot-group-title
       padding: .12rem 0 .13rem
       position: relative
+
       img
         width: 0.15rem
         vertical-align: text-top
         margin-left: .1rem
+
       span
         font-size: .16rem
         line-height: .22rem
