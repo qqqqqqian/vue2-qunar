@@ -17,6 +17,7 @@ import HomeHot from './components/HotGroup'
 import HomeLike from './components/GuessLike'
 import HomeWhere from './components/Where'
 import axios from 'axios'
+import { mapState } from 'vuex'
 
 export default {
   name: 'Home',
@@ -28,17 +29,18 @@ export default {
     HomeLike,
     HomeWhere
   },
+  computed: {
+    ...mapState(['city'])
+  },
   data () {
     return {
       swiperList: [],
       iconList: [],
       groupList: {},
       guessLikeList: {},
-      whereItemsList: []
+      whereItemsList: [],
+      lastCity: ''
     }
-  },
-  created () {
-    axios.get('api/index.json').then(this.getRes)
   },
   methods: {
     getRes (res) {
@@ -50,6 +52,19 @@ export default {
         this.guessLikeList = data.guessLikeList
         this.whereItemsList = data.whereItemsList
       }
+    },
+    getIndexJson () {
+      axios.get('api/index.json?' + this.lastCity).then(this.getRes)
+    }
+  },
+  created () {
+    this.lastCity = this.city
+    this.getIndexJson()
+  },
+  activated () {
+    if (this.lastCity !== this.city) {
+      this.getIndexJson()
+      this.lastCity = this.city
     }
   }
 }
