@@ -27,7 +27,7 @@
 
 ``` bash
 # clone the repo into your disk.
-$ git clone https://github.com/1049759078/travel.git
+$ git clone git@github.com:qqqqqqian/vue2-qunar.git
 
 # install dependencies
 $ npm install
